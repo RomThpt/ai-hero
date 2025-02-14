@@ -1,7 +1,7 @@
 import { evalite } from "evalite";
 import { describeImage } from "../src/describe_image";
 
-evalite("Fake Users", {
+evalite("Describe Image", {
   data: async () => [
     {
       input: "./fireworks.jpg",
