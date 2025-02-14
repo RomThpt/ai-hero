@@ -14,8 +14,10 @@
   "packageManager": "pnpm@8.15.6",
   "dependencies": {
     "@ai-sdk/mistral": "^1.1.10",
+    "@hono/node-server": "^1.13.8",
     "ai": "^4.1.38",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "hono": "^4.7.1"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",

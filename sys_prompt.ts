@@ -1,18 +1,11 @@
-import { createMistral } from "@ai-sdk/mistral";
 import { generateText } from "ai";
-import dotenv from "dotenv";
-dotenv.config();
-
-const mistral = createMistral({
-  apiKey: process.env.MISTRAL_API_KEY,
-});
-const model = mistral("open-mistral-7b");
+import { mistral_model } from "./models/mistral_model";
 
 export const summarizeText = async (
   question: string
 ) => {
   const { text } = await generateText({
-    model,
+    model:mistral_model,
     prompt: question,
     system:
       `You are a summarizer. ` +
