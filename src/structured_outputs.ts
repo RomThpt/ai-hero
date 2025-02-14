@@ -32,5 +32,5 @@ export const createRecipe = async (prompt: string) => {
 
   const finalObject = await result.object;
 
-  return finalObject.recipe;
+  return finalObject.recipe.name;
 };
