@@ -1,4 +1,5 @@
 import { createMistral } from "@ai-sdk/mistral";
+import { streamText } from "ai";
 import { generateText } from "ai";
 import dotenv from "dotenv";
 dotenv.config();
@@ -10,12 +11,17 @@ const model = mistral("open-mistral-7b");
 
 export const answerMyQuestion = async (
   question: string
-) => {
-  const { text } = await generateText({
+): Promise<string> => {
+  const { textStream } = await streamText({
     model,
     prompt: question,
   });
 
-  return text;
-};
+  let fullResponse = "";
+  for await (const text of textStream) {
+    fullResponse += text;
+    process.stdout.write(text);
+  }
 
+  return fullResponse;
+};

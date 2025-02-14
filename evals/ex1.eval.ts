@@ -1,13 +1,14 @@
 import { evalite } from "evalite";
 import { answerMyQuestion } from "../main.ts";
 
-evalite("Answer A Question", {
+evalite("Answer A Question (Streaming)", {
   data: async () => [
     {
-      input: "What is the meaning of life?",
-    },
+      input:
+        "Who are you?",
+    }
   ],
-  task: async (input) => {
+  task: async (input): Promise<string> => {
     return answerMyQuestion(input);
   },
   scorers: [],
