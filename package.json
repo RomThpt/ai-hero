@@ -5,7 +5,8 @@
   "main": "main.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eval:dev": "evalite watch"
   },
   "keywords": [],
   "author": "",
@@ -13,10 +14,15 @@
   "packageManager": "pnpm@8.15.6",
   "dependencies": {
     "@ai-sdk/mistral": "^1.1.10",
-    "ai": "^4.1.38"
+    "ai": "^4.1.38",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
-    "typescript": "^5.7.2"
+    "@types/node": "^22.13.4",
+    "autoevals": "^0.0.119",
+    "evalite": "^0.8.4",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
   },
   "prettier": {
     "printWidth": 55
