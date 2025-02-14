@@ -1,11 +1,11 @@
 import { generateText } from "ai";
-import { mistral_model } from "./models/mistral_model";
+import { mistral_model } from "../models/mistral_model";
 
 export const summarizeText = async (
   question: string
 ) => {
   const { text } = await generateText({
-    model:mistral_model,
+    model: mistral_model,
     prompt: question,
     system:
       `You are a summarizer. ` +

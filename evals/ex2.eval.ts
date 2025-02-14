@@ -1,5 +1,5 @@
 import { evalite } from "evalite";
-import { summarizeText } from "../sys_prompt";
+import { summarizeText } from "../src/sys_prompt";
 
 evalite("Summarize Text", {
   data: async () => [

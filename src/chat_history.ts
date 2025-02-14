@@ -1,5 +1,5 @@
 import { type CoreMessage } from "ai";
-import { startServer } from "./server/server";
+import { startServer } from "../server/server";
 
 const messageToSend: CoreMessage[] = [
   {
